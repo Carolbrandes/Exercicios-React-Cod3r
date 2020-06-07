@@ -1,0 +1,8 @@
+1) para criar o projeto usamos: npx create-react-app fundamentos-react
+o npx serve para nao instalar global
+
+2) apagamos todos os arquivos da pasta src
+
+3) Para iniciar a aplicacao: npm start
+
+
