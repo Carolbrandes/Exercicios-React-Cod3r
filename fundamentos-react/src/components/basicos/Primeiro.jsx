@@ -7,6 +7,7 @@ export default function Primeiro(){
         // return 'Primeiro Componente';
         const msg = 'Seja bem vindo(a)!';
         // para identar o codigo na linha de baixo e importante que esteja dentro do parentesis (q quer dizer q e uma expressao). Se voce colocar return e ir para linha de baixo e colocar as tags htmls vai dar erro, por isso usar o parentesis
+        // os componentes abaixo sao funcionais (baseados em funcao)
         return (
                 <div>
                         <h2>Primeiro Componente</h2>
