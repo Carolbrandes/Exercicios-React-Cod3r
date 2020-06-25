@@ -11,19 +11,19 @@ export default _ =>
                 <h1>Fundamentos React </h1>
 
                 <div className="Cards">
-                        <Card titulo="#04 - Desafio Números Aleatórios:">
+                        <Card titulo="#04 - Desafio Números Aleatórios:" color="#FA6900">
                                 <Aleatorio valorMin={2} valorMax={100} />
                         </Card>
 
-                        <Card titulo="#03 - Fragmentos:">
+                        <Card titulo="#03 - Fragmentos:" color="#E94C6F">
                                 <Fragmento />
                         </Card>
 
-                        <Card titulo="#02 - Com Parâmetro:">
+                        <Card titulo="#02 - Com Parâmetro:" color="#E8B71A">
                                 <ComParametro titulo="Situação do Aluno" aluno="Pedro" nota={9.3}></ComParametro>
                         </Card>
 
-                        <Card titulo="#01 - Primeiro Componente:">
+                        <Card titulo="#01 - Primeiro Componente:" color="#588C73">
                                 <Primeiro></Primeiro>
                         </Card>
                 </div>
