@@ -1,13 +1,17 @@
 import React from 'react';
-import FamiliaMembro from './FamiliaMembro';
+import { cloneElement } from 'react';
 
 export default props => {
         return (
                 <div>
-                        <FamiliaMembro nome="Pedro" sobrenome={props.sobrenome} />
-                        {/* utilizando o  operador "spread" ...props estamos passando todas as propriedades declaradas no elemento pai para o elemento filho */}
-                        <FamiliaMembro nome="Ana" {...props} />
-                        <FamiliaMembro nome="Gustavo" sobrenome="Silva"/>
+                      {
+                              React.Children.map(props.children, child => {
+                                      return cloneElement(child, props);
+                              })
+                      }
+                      
                 </div>
         )
 }
+
+// na linha 8 em props.children estamos recebendo todos os filhos e para cada filho (child) ele vai retorna um clone com as propriedades herdadas pelo elemento pai
