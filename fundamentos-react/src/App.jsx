@@ -8,6 +8,7 @@ import Card from './components/layout/Card';
 import Familia from './components/basicos/Familia';
 import FamiliaMembro from './components/basicos/FamiliaMembro';
 import ListaAlunos from './components/repeticao/ListaAlunos';
+import TabelaProdutos from './components/repeticao/TabelaProdutos';
 
 export default _ =>
         <div id="App">
@@ -15,8 +16,12 @@ export default _ =>
 
                 <div className="Cards">
 
+                        <Card titulo="#07 - Desafio Repetição:" color="#6495ED">
+                              <TabelaProdutos></TabelaProdutos>
+                        </Card>
+
                         <Card titulo="#06 - Repetição:" color="#FF4C65">
-                               <ListaAlunos></ListaAlunos>
+                                <ListaAlunos></ListaAlunos>
                         </Card>
 
                         <Card titulo="#05 - Componente com Filhos:" color="#00C8F8">
