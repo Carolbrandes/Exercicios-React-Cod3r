@@ -5,7 +5,7 @@ import produtos from '../../data/produtos';
 
 export default props => {
         const linhasTabela = produtos.map((produto, indice) => (
-                <tr key={produto.id} className={indice % 2 == 0 ? 'Par' : ''}>
+                <tr key={produto.id} className={indice % 2 === 0 ? 'Par' : ''}>
                         <td>{produto.id}</td>
                         <td>{produto.nome}</td>
                         <td>R$ {produto.preco.toFixed(2).replace('.', ',')}</td>
