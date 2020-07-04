@@ -22,7 +22,7 @@ export default _ =>
                                 <ParOuImpar numero={20}></ParOuImpar>
                                 <ParOuImpar numero={21}></ParOuImpar>
                                 <UsuarioInfo usuario={{nome: 'Fernando'}} ></UsuarioInfo>
-                                <UsuarioInfo usuario={{email: 'fernando@gmail.com'}} ></UsuarioInfo>
+                                {/* <UsuarioInfo usuario={{email: 'fernando@gmail.com'}} ></UsuarioInfo> */}
                         </Card>
 
                         <Card titulo="#07 - Desafio Repetição:" color="#6495ED">

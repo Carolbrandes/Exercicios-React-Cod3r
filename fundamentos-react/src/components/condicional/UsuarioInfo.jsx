@@ -1,5 +1,5 @@
 import React from 'react';
-import If from './If';
+import If, { Else } from './If';
 
 export default props => {
         const usuario = props.usuario || {}
@@ -8,11 +8,14 @@ export default props => {
                         {/* vai testar se o usuario estiver setado e se o nome do usuario for valido, entao se nao  for passado um usuario ou um usuario nao tiver o nome ele nao renderizar o componente dentro do if */}
                         <If test={usuario && usuario.nome}>
                                 Seja Bem Vindo {usuario.nome}!
+                                <Else>
+                                        Seja Bem Vindo Amigão!
+                                </Else>
                         </If>
 
-                        <If test={!usuario || !usuario.nome}>
+                        {/* <If test={!usuario || !usuario.nome}>
                                 Seja Bem Vindo Amigão!
-                        </If>
+                        </If> */}
                 </div>
         )
 }
