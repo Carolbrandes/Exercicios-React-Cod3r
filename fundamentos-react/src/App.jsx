@@ -11,6 +11,8 @@ import ListaAlunos from './components/repeticao/ListaAlunos';
 import TabelaProdutos from './components/repeticao/TabelaProdutos';
 import ParOuImpar from './components/condicional/ParOuImpar';
 import UsuarioInfo from './components/condicional/UsuarioInfo';
+import DiretaPai from './components/comunicacao/DiretaPai';
+import IndiretaPai from './components/comunicacao/IndiretaPai';
 
 export default _ =>
         <div id="App">
@@ -18,10 +20,18 @@ export default _ =>
 
                 <div className="Cards">
 
+                        <Card titulo="#10 -Comunicação Indireta:" color="#8BAD39">
+                                <IndiretaPai></IndiretaPai>
+                        </Card>
+
+                        <Card titulo="#09 -Comunicação Direta:" color="#59323c">
+                                <DiretaPai></DiretaPai>
+                        </Card>
+
                         <Card titulo="#08 - Renderização Condicional:" color="#982395">
                                 <ParOuImpar numero={20}></ParOuImpar>
                                 <ParOuImpar numero={21}></ParOuImpar>
-                                <UsuarioInfo usuario={{nome: 'Fernando'}} ></UsuarioInfo>
+                                <UsuarioInfo usuario={{ nome: 'Fernando' }} ></UsuarioInfo>
                                 {/* <UsuarioInfo usuario={{email: 'fernando@gmail.com'}} ></UsuarioInfo> */}
                         </Card>
 
