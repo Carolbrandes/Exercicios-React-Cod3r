@@ -1,5 +1,8 @@
 import './Contador.css';
 import React, { Component } from 'react';
+import Display from './Display';
+import Botoes from './Botoes';
+import PassoForm from './PassoForm';
 
 export default class Contador extends Component {
 
@@ -20,9 +23,9 @@ export default class Contador extends Component {
                 this.setState({ numero: this.state.numero - this.state.passo });
         };
 
-        setPasso = (evento) => {
+        setPasso = (novoPasso) => {
                 // como o e.target.value ele vai vir como string colocamos o sinal de + antes para converter para um numero inteiro
-                this.setState({passo: +evento.target.value})
+                this.setState({ passo: novoPasso })
         }
 
         // forma 2 - utilizando o constructor e chamando o state dentro dele
@@ -41,18 +44,16 @@ export default class Contador extends Component {
                 return (
                         <div className="Contador">
                                 <h2>Contador</h2>
-                                <h3>{this.state.numero}</h3>
-                                <div>
-                                        <label htmlFor="passoInput">Passo:</label>
-                                        <input type="number" id="passoInput" value={this.state.passo} onChange={this.setPasso} />
-                                </div>
+                                <Display numero={this.state.numero} />
+                                <PassoForm passo={this.state.passo} setPasso={this.setPasso} />
+                                <Botoes incrementar={this.incrementar} decrementar={this.decrementar} />
+
                                 {/* o this aponta para a instancia da classe */}
                                 {/* <p>Valor Inicial: {this.props.numeroInicial}</p> */}
-                                <button onClick={this.incrementar}>+</button>
+
                                 {/* outra forma de resolver a questao do this, é associar um arrow function no onClick */}
                                 {/* <button onClick={ e => this.incrementar()}>+</button> */}
 
-                                <button onClick={this.decrementar}>-</button>
                         </div>
                 )
         }
