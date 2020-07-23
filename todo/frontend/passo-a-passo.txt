@@ -1,0 +1,18 @@
+1) dentro da pasta frontend do projeto todo vamos rodar o comando npm init -y
+2) instalar as depedencias: 
+2.1) npm i --save-dev webpack@1.14.0 webpack-dev-server@1.16.2
+2.2) npm i --save-dev babel-core@6.22.1 babel-loader@6.2.10 babel-pluggin-react-html-attrs@2.0.0 babel-pluggin-transform-object-rest-spread@6.22.0 babel-preset-es2015@6.22.0 babel-preset-react@6.22.0
+2.3) npm i --save-dev extract-text-webpack-plugin@1.0.1 css-loader@0.26.1 style-loader@0.13.1 file-loader@0.9.0
+2.4) npm i --save-dev bootstrap@3.3.7 font-awesome@4.7.0
+2.5) npm i --save-dev react@15.4.2 react-router@3.0.2 axios@0.15.3
+
+3) dentro da pasta frontend vamos criar o arquivo: webpack.config.js e fazer as configurações
+
+4) depois no arquivo package.json vamos colocar dois scripts para inicialização um para desenvolvimento e outro para produção.
+(linha 7 e 8 do arquivo)
+
+5) Vamos criar a pasta public e dentro dessa pasta vamos criar o arquivo index.html e vamos referenciar os arquivos app.css, app.js e esses arquivos foram configurados tds no webpack.config.js
+
+6) Todos os nossos componentes e as coisas que criarmos vai ficar na pasta que vampos criar que é a src, e dentro dessa pasta vamos criar a pasta main > app.jsx e index.jsx (que e referenciada na config webpack)
+
+7) vamos rodar o comando: npm run dev na pasta frontend
