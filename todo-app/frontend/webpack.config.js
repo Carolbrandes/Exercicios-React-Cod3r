@@ -9,16 +9,15 @@ module.exports = {
     },
     devServer: {
         port: 8080,
-        contentBase: './public'
+        contentBase: './public',
     },
     resolve: {
         extensions: ['', '.js', '.jsx'],
-        // aqui vamos dar um apelido para a pasta node modules
         alias: {
             modules: __dirname + '/node_modules'
         }
     },
-    pluggins: [
+    plugins: [
         new ExtractTextPlugin('app.css')
     ],
     module: {
@@ -27,16 +26,15 @@ module.exports = {
             loader: 'babel-loader',
             exclude: /node_modules/,
             query: {
-                presents: ['es2015', 'react'],
+                presets: ['es2015', 'react'],
                 plugins: ['transform-object-rest-spread']
             }
         }, {
             test: /\.css$/,
             loader: ExtractTextPlugin.extract('style-loader', 'css-loader')
         }, {
-            test: /\.woff | .woff2 | .ttf | .eot | .svg*.*$/,
+            test: /\.woff|.woff2|.ttf|.eot|.svg*.*$/,
             loader: 'file'
         }]
     }
-
 }
